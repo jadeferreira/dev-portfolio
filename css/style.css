@@ -1,0 +1,266 @@
+@font-face {
+    font-family: "Unbounded";
+    src: url("./fonts/Unbounded-Bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-Regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(3deg, #000000 45%, #2B124C 100%) fixed;
+}
+
+.cabecalho{
+    font-family: "Unbounded", sans-serif;
+}
+
+.cabecalhoNav{
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 15rem;
+    margin: 0 0 6rem 0;
+} 
+
+.cabecalhoNavMenu{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.cabecalhoNavMenu li a{
+    color: #e0dede;
+    text-decoration: none;
+    font-size: 13px;
+    position: relative;
+}
+
+.cabecalhoNavMenu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #743283;
+  transition: width 0.3s ease;
+}
+
+.cabecalhoNavMenu a:hover::after {
+  width: 100%;
+}
+
+.principal{
+    margin: 6rem;
+}
+
+.sectionApresentacao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 6rem;
+}
+
+.principalApresentacao{
+    font-family: "Unbounded", sans-serif;
+    color: #fff;
+}
+
+.apresentacaoBotao{
+    font-size: 12px;
+    color: #743283;
+    font-weight: 600;
+    border: 1px solid #743283;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 34px;
+}
+
+.apresentacaoTituloPrincipal{
+    font-size: 50px;
+    margin: 14px 0;
+    font-weight: 800;
+    width: 470px;
+}
+
+.apresentacaoTituloPrincipal strong{
+    background: linear-gradient(90deg, #743283, #2B124C, #341653);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.apresentacaoDescricaoDest{
+    font-size: 16px;
+    color: #fff;
+}
+
+.apresentacaoDescricao{
+    font-size: 16px;
+    color: #94A3B8;
+    width: 700px;
+} 
+
+.apresentacaoDescricao strong{
+    color: #743283;
+    font-weight: 600;
+    display: inline-block;
+    animation: respirar 1s infinite;
+}
+
+@keyframes respirar {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.divRedesSociais{
+    display: flex;
+    gap: 14px;
+    margin: 20px 0;
+}
+
+.social-icon{
+    background-color: #46464655;
+    border: 1px solid #464646;
+    border-radius: 10px;
+    padding: 9px;
+}
+
+.social-icon:hover{
+    border-color: #743283;
+    transition: 0.3s;
+}
+
+.social-icon i{
+    color: #fff;
+    font-size: 18px;
+}
+
+.social-icon:hover i{
+    color: #743283;
+    transition: 0.3s;
+}
+
+.divBotoes{
+    font-family: "Unbounded", sans-serif;
+    font-size: 14px;
+    font-weight: 750;
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.divBotoes i{
+    margin-right: 8px;
+    color: #94A3B8;
+}
+
+.divBotoesCtt{
+    margin-right: 8px;
+    background: linear-gradient(90deg, #743283, #341653, #2B124C);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.divBotoesCtt:hover{
+    background: #743283;
+    transition: 0.4s;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.divBotoesBaixar{
+    background: #46464655;
+    border: 1px solid #464646;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.divBotoesBaixar:hover{
+    background: #66666655;
+    border-color: #743283;
+    transition: 0.4s;
+}
+
+
+
+/* ///////////////////////////////// */
+
+.code-window {
+  width: 100%;
+  max-width: 500px;
+  background-color: #070707;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(124, 58, 237, 0.138);
+  font-family: 'Fira Code', monospace;
+}
+
+.code-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 18px;
+  background-color: #120d0d;
+  border-bottom: 1px solid #1f1f35;
+}
+
+.dots {
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.red { background: #2B124C; }
+.yellow { background: #341653; }
+.green { background: #743283; }
+
+.file-name {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.code-body {
+  padding: 2rem 5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+.keyword {
+  color: #743283;
+}
+
+.string {
+  color: #9e356b;
+}
+
+.boolean {
+  color: #743283;
+}
+
