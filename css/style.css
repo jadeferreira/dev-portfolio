@@ -14,72 +14,79 @@
     font-display: swap;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     background: linear-gradient(3deg, #000000 45%, #2B124C 100%) fixed;
 }
 
-.cabecalho{
+/*  HEADER  */
+
+.cabecalho {
     font-family: "Unbounded", sans-serif;
 }
 
-.cabecalhoNav{
+.cabecalhoNav {
     display: flex;
     justify-content: flex-end;
-    padding: 2rem 15rem;
+    padding: 2rem 4rem; 
     margin: 0 0 6rem 0;
-} 
+}
 
-.cabecalhoNavMenu{
+.cabecalhoNavMenu {
     list-style: none;
     display: flex;
     gap: 40px;
 }
 
-.cabecalhoNavMenu li a{
+.cabecalhoNavMenu li a {
     color: #e0dede;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 15px;
     position: relative;
 }
 
 .cabecalhoNavMenu a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 0%;
-  height: 2px;
-  background-color: #743283;
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background-color: #743283;
+    transition: width 0.3s ease;
 }
 
 .cabecalhoNavMenu a:hover::after {
-  width: 100%;
+    width: 100%;
 }
 
-.principal{
-    margin: 6rem;
+/*  MAIN  */
+
+.principal {
+    margin: 0 4rem 6rem;
 }
 
-.sectionApresentacao{
+.sectionApresentacao {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    margin: 6rem;
+    width: 100%;
 }
 
-.principalApresentacao{
+/* APRESENTAÇÃO  */
+
+.principalApresentacao {
     font-family: "Unbounded", sans-serif;
     color: #fff;
 }
 
-.apresentacaoBotao{
+.apresentacaoBotao {
     font-size: 12px;
     color: #743283;
     font-weight: 600;
@@ -89,31 +96,33 @@ body{
     border-radius: 34px;
 }
 
-.apresentacaoTituloPrincipal{
+.apresentacaoTituloPrincipal {
     font-size: 50px;
     margin: 14px 0;
     font-weight: 800;
-    width: 470px;
+    width: 470px; 
+    max-width: 100%;
 }
 
-.apresentacaoTituloPrincipal strong{
+.apresentacaoTituloPrincipal strong {
     background: linear-gradient(90deg, #743283, #2B124C, #341653);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.apresentacaoDescricaoDest{
+.apresentacaoDescricaoDest {
     font-size: 16px;
     color: #fff;
 }
 
-.apresentacaoDescricao{
+.apresentacaoDescricao {
     font-size: 16px;
     color: #94A3B8;
     width: 700px;
-} 
+    max-width: 100%;
+}
 
-.apresentacaoDescricao strong{
+.apresentacaoDescricao strong {
     color: #743283;
     font-weight: 600;
     display: inline-block;
@@ -121,43 +130,43 @@ body{
 }
 
 @keyframes respirar {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
+    0%, 100% { transform: scale(1); }
+    50%       { transform: scale(1.02); }
 }
 
-.divRedesSociais{
+/* REDES SOCIAIS */
+
+.divRedesSociais {
     display: flex;
     gap: 14px;
     margin: 20px 0;
 }
 
-.social-icon{
+.social-icon {
     background-color: #46464655;
     border: 1px solid #464646;
     border-radius: 10px;
     padding: 9px;
 }
 
-.social-icon:hover{
+.social-icon:hover {
     border-color: #743283;
     transition: 0.3s;
 }
 
-.social-icon i{
+.social-icon i {
     color: #fff;
     font-size: 18px;
 }
 
-.social-icon:hover i{
+.social-icon:hover i {
     color: #743283;
     transition: 0.3s;
 }
 
-.divBotoes{
+/* BOTÕES */
+
+.divBotoes {
     font-family: "Unbounded", sans-serif;
     font-size: 14px;
     font-weight: 750;
@@ -166,13 +175,12 @@ body{
     margin: 20px 0;
 }
 
-.divBotoes i{
+.divBotoes i {
     margin-right: 8px;
     color: #94A3B8;
 }
 
-.divBotoesCtt{
-    margin-right: 8px;
+.divBotoesCtt {
     background: linear-gradient(90deg, #743283, #341653, #2B124C);
     color: #fff;
     padding: 15px 20px;
@@ -180,14 +188,14 @@ body{
     text-decoration: none;
 }
 
-.divBotoesCtt:hover{
+.divBotoesCtt:hover {
     background: #743283;
     transition: 0.4s;
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
-.divBotoesBaixar{
+.divBotoesBaixar {
     background: #46464655;
     border: 1px solid #464646;
     color: #fff;
@@ -196,71 +204,201 @@ body{
     text-decoration: none;
 }
 
-.divBotoesBaixar:hover{
+.divBotoesBaixar:hover {
     background: #66666655;
     border-color: #743283;
     transition: 0.4s;
 }
 
-
-
-/* ///////////////////////////////// */
+/* CODE WINDOW */
 
 .code-window {
-  width: 100%;
-  max-width: 500px;
-  background-color: #070707;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 0 40px rgba(124, 58, 237, 0.138);
-  font-family: 'Fira Code', monospace;
+    width: 100%;
+    max-width: 500px;
+    background-color: #070707;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.138);
+    font-family: 'Fira Code', monospace;
 }
 
 .code-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 18px;
-  background-color: #120d0d;
-  border-bottom: 1px solid #1f1f35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    background-color: #120d0d;
+    border-bottom: 1px solid #1f1f35;
 }
 
 .dots {
-  display: flex;
-  gap: 8px;
+    display: flex;
+    gap: 8px;
 }
 
 .dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
 }
 
-.red { background: #2B124C; }
-.yellow { background: #341653; }
-.green { background: #743283; }
+.roxoPrincipal    { background: #2B124C; }
+.roxoSecundario { background: #341653; }
+.roxoTerceario  { background: #743283; }
 
 .file-name {
-  font-size: 0.85rem;
-  color: #888;
+    font-size: 0.85rem;
+    color: #888;
 }
 
 .code-body {
-  padding: 2rem 5rem;
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: #e2e8f0;
+    padding: 2rem 5rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #e2e8f0;
 }
 
-.keyword {
-  color: #743283;
+.keyword { color: #743283; }
+.string  { color: #9e356b; }
+.boolean { color: #743283; }
+
+/* RESPONSIVIDADE — TABLET */
+
+@media (max-width: 1024px) {
+    .cabecalhoNav {
+        padding: 1.5rem 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .principal {
+        margin: 0 2rem 4rem;
+    }
+
+    .sectionApresentacao {
+        gap: 2rem;
+    }
+
+    .apresentacaoTituloPrincipal {
+        font-size: 38px;
+        width: 100%;
+    }
+
+    .apresentacaoDescricao {
+        width: 100%;
+    }
+
+    .code-body {
+        padding: 1.5rem 2rem;
+    }
 }
 
-.string {
-  color: #9e356b;
+/* RESPONSIVIDADE — MOBILE (768px) */
+
+@media (max-width: 768px) {
+    .cabecalhoNav {
+        justify-content: center;
+        padding: 1.2rem 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .cabecalhoNavMenu {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .cabecalhoNavMenu li a {
+        font-size: 13px;
+    }
+
+    .principal {
+        margin: 0 1.5rem 4rem;
+    }
+
+    .sectionApresentacao {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .apresentacaoTituloPrincipal {
+        font-size: 30px;
+        width: 100%;
+        line-height: 1.3;
+    }
+
+    .apresentacaoDescricaoDest {
+        font-size: 14px;
+    }
+
+    .apresentacaoDescricao {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .divBotoes {
+        width: 70%;
+    }
+
+    .divBotoesCtt,
+    .divBotoesBaixar {
+        text-align: center;
+        width: 100%;
+        padding: 14px 16px;
+        font-size: 13px;
+    }
+
+    .code-window {
+        max-width: 100%;
+    }
+
+    .code-body {
+        padding: 1.2rem 1.5rem;
+        font-size: 0.8rem;
+    }
 }
 
-.boolean {
-  color: #743283;
-}
+/* RESPONSIVIDADE — MOBILE PEQUENO (480px) */
 
+@media (max-width: 480px) {
+    .cabecalhoNavMenu {
+        gap: 10px;
+    }
+
+    .cabecalhoNavMenu li a {
+        font-size: 11px;
+    }
+
+    .apresentacaoBotao {
+        font-size: 10px;
+    }
+
+    .apresentacaoTituloPrincipal {
+        font-size: 24px;
+    }
+
+    .apresentacaoDescricaoDest,
+    .apresentacaoDescricao {
+        font-size: 13px;
+    }
+
+    .code-body {
+        padding: 1rem;
+        font-size: 0.75rem;
+    }
+
+    .sectionApresentacao {
+        align-items: center;
+    }
+
+    .codeApresentacao {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .code-window {
+        width: 100%;
+        max-width: 360px;
+    }
+}
