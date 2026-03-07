@@ -265,27 +265,6 @@ body {
 
 /* SEÇÃO SOBRE MIM */
 
-.secaoTitulo{
-    position: relative;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    overflow: hidden;
-    margin-top: 10rem;
-}
-
-.secaoTituloFundo {
-    position: absolute;
-    font-family: "Unbounded", sans-serif;
-    font-size: 64px;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.06);
-    letter-spacing: 10px;
-    white-space: nowrap;
-}
-
 .secaoTituloConteudo h2 {
     font-family: "Unbounded", sans-serif;
     font-size: 22px;
@@ -294,12 +273,51 @@ body {
     white-space: nowrap;
 }
 
-.secaoTituloLinha {
-    width: 50%;
-    height: 3px;
-    background: #743283;
-    border-radius: 2px;
-    margin: auto;
+/* TITULOS */
+
+.techStackLabel {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.techStackLinha {
+    flex: 0.05;
+    height: 1px;
+    background-color: #743283;
+    opacity: 0.6;
+    width: 1%;
+}
+
+.techStackLabelTexto {
+    font-family: "Unbounded", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #341653;
+    letter-spacing: 4px;
+    white-space: nowrap;
+}
+
+.techStackTitulo {
+    font-family: "Unbounded", sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1;
+    margin: 15px 0;
+    text-align: center;
+
+}
+
+.techStackBranco {
+    color: #e0dede;
+}
+
+.techStackDestaque {
+    background: linear-gradient(180deg, #34165379 0%, #743283d0 60%, #2B124C 100%);
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .secaoSub{
@@ -309,7 +327,7 @@ body {
     width: 100%;
     gap: 8rem;
     justify-content: center;
-    margin-top: 6rem;
+    margin: 10rem auto;
 }
 
 .secaoSubDescricao{
@@ -391,6 +409,156 @@ body {
     width: 100%;
 }
 
+/* ----- QUALIFICAÇÕES ----- */
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    position: relative;
+    padding: 20px 0;
+    margin-bottom: 25px;
+}
+
+/* Linha vertical central */
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #74328361, #2B124C);
+    transform: translateX(-50%);
+}
+
+/* ITEM */
+.timelineItem {
+    display: grid;
+    grid-template-columns: 1fr 60px 1fr;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+/*  ÍCONE CENTRAL */
+.timelineIcone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: #1a0a0a;
+    border: 2px solid #7432839a;
+    border-radius: 10px;
+    z-index: 1;
+    justify-self: center;
+}
+
+.timelineIcone i {
+    color: #743283;
+    font-size: 16px;
+}
+
+/*  CARD  */
+.timelineCard {
+    background-color: #0d0d0d89;
+    border: 1px solid #2b124c60;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.timelineCard img {
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.232);
+}
+
+.timelineCardTitulo {
+    font-family: "Unbounded", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.timelineCardEmpresa {
+    font-family: "Unbounded", sans-serif;
+    font-size: 16px;
+    color: #743283;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.timelineCardEmpresaInfo {
+    color: #fff;
+    font-family: "Unbounded", sans-serif;
+    font-size: 12px;
+    font-weight: regular;
+}
+
+/*  DATA */
+.timelineData {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    color: #94A3B8;
+    background-color: #170a1a3d;
+    border: 1px solid #170a1a;
+    border-radius: 20px;
+    padding: 6px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.timelineData i {
+    color: #743283;
+}
+
+/* ----- DIREITA: [data] [ícone] [card] ----- */
+.timelineItem.direita .timelineCard  { grid-column: 3; grid-row: 1; }
+.timelineItem.direita .timelineIcone { grid-column: 2; grid-row: 1; }
+.timelineItem.direita .timelineData  {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: end;
+}
+
+/* ----- ESQUERDA: [card] [ícone] [data] ----- */
+.timelineItem.esquerda .timelineCard  { grid-column: 1; grid-row: 1; }
+.timelineItem.esquerda .timelineIcone { grid-column: 2; grid-row: 1; }
+.timelineItem.esquerda .timelineData  {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: start;
+}
+
+.timelineCardLista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.timelineCardLista li {
+    font-family: "Poppins", sans-serif;
+    font-size: 15px;
+    color: #94A3B8;
+    padding-left: 16px;
+    position: relative;
+}
+
+/* Seta › em cada item da lista */
+.timelineCardLista li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #743283;
+    font-size: 16px;
+    line-height: 1;
+}
+
 /* RESPONSIVIDADE — TABLET */
 
 @media (max-width: 1024px) {
@@ -438,7 +606,7 @@ body {
     }
 
     .cabecalhoNavMenu li a {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .principal {
@@ -457,11 +625,11 @@ body {
     }
 
     .apresentacaoDescricaoDest {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .apresentacaoDescricao {
-        font-size: 14px;
+        font-size: 16px;
         width: 100%;
     }
 
@@ -485,6 +653,21 @@ body {
         padding: 1.2rem 1.5rem;
         font-size: 0.8rem;
     }
+
+    .secaoSub{
+        flex-direction: column;
+        gap: 2rem;
+        margin: 5rem auto;
+    }
+
+    .secaoSub h2{
+        font-size: 24px;
+    }
+
+    .secaoSubImagem {
+        width: 50%;
+    }
+
 }
 
 /* RESPONSIVIDADE — MOBILE PEQUENO (480px) */
@@ -495,7 +678,7 @@ body {
     }
 
     .cabecalhoNavMenu li a {
-        font-size: 11px;
+        font-size: 12px;
     }
 
     .apresentacaoBotao {
@@ -508,7 +691,7 @@ body {
 
     .apresentacaoDescricaoDest,
     .apresentacaoDescricao {
-        font-size: 13px;
+        font-size: 16px;
     }
 
     .code-body {
@@ -530,4 +713,11 @@ body {
         width: 100%;
         max-width: 360px;
     }
+
+    .secaoSubInformacoes{
+        font-size: 14px;
+    }
 }
+/* 
+**************************************************** */
+
