@@ -97,10 +97,10 @@ body {
 }
 
 .apresentacaoTituloPrincipal {
-    font-size: 50px;
+    font-size: 64px;
     margin: 14px 0;
     font-weight: 800;
-    width: 470px; 
+    width: 557px; 
     max-width: 100%;
 }
 
@@ -111,15 +111,16 @@ body {
 }
 
 .apresentacaoDescricaoDest {
-    font-size: 16px;
+    font-size: 18px;
     color: #fff;
 }
 
 .apresentacaoDescricao {
-    font-size: 16px;
-    color: #94A3B8;
+    font-size: 18px;
+    color: #94a3b8ca;
     width: 700px;
     max-width: 100%;
+    line-height: 1.6;
 }
 
 .apresentacaoDescricao strong {
@@ -261,6 +262,134 @@ body {
 .keyword { color: #743283; }
 .string  { color: #9e356b; }
 .boolean { color: #743283; }
+
+/* SEÇÃO SOBRE MIM */
+
+.secaoTitulo{
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    overflow: hidden;
+    margin-top: 10rem;
+}
+
+.secaoTituloFundo {
+    position: absolute;
+    font-family: "Unbounded", sans-serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.06);
+    letter-spacing: 10px;
+    white-space: nowrap;
+}
+
+.secaoTituloConteudo h2 {
+    font-family: "Unbounded", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.secaoTituloLinha {
+    width: 50%;
+    height: 3px;
+    background: #743283;
+    border-radius: 2px;
+    margin: auto;
+}
+
+.secaoSub{
+    font-family: "Unbounded", sans-serif;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8rem;
+    justify-content: center;
+    margin-top: 6rem;
+}
+
+.secaoSubDescricao{
+    width: 100%;
+    max-width: 700px;
+}
+
+.secaoSubTitulo{
+    color: #fff;
+    font-size: 30px;
+}
+
+.secaoSubTitulo strong{
+    color: #743283;
+}
+
+.secaoSubParagrafos{
+    color: #94a3b8ca;
+    margin-top: 10px;
+    line-height: 1.6;
+    margin: 25px 0;
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.secaoSubInformacoes{
+    color: #fff;
+    line-height: 1.6;
+    letter-spacing: 0.10em;
+}
+
+.secaoSubInformacoes li{
+    list-style: none;
+}
+
+.secaoSubInformacoes span{
+    color: #743283;
+}
+
+.secaoSubBtn{
+    margin-top: 32px;
+}
+
+.secaoSubInformacoes a{
+    font-family: "Unbounded", sans-serif;
+    font-size: 14px;
+    font-weight: 750;
+    background: linear-gradient(90deg, #743283, #341653, #2B124C);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.secaoSubInformacoes a:hover{
+    background: #743283;
+    transition: 0.4s;
+}
+
+.secaoLinhaInfor{
+    width: 85%;
+    height: 1px;
+    background: #94a3b827;
+    border-radius: 2px;
+    margin: 3px 0 14px 0;
+}
+
+.secaoSubImagem {
+    width: 100%;
+    max-width: 444px;
+    padding: 18px;
+    background: rgba(148, 163, 184, 0.027);
+    border: 1.5px solid rgba(148, 163, 184, 0.12);
+    border-radius: 22px;
+}
+
+.secaoSubImagem img {
+    width: 100%;
+}
 
 /* RESPONSIVIDADE — TABLET */
 
