@@ -120,7 +120,7 @@ body {
     color: #94a3b8ca;
     width: 700px;
     max-width: 100%;
-    line-height: 1.6;
+    line-height: 1.1;
 }
 
 .apresentacaoDescricao strong {
@@ -473,6 +473,12 @@ body {
     box-shadow: 0 0 40px rgba(124, 58, 237, 0.232);
 }
 
+.timelineCard:hover{
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.208);
+    transition: 0.3s;
+    background-color: #36353539;
+}
+
 .timelineCardTitulo {
     font-family: "Unbounded", sans-serif;
     font-size: 18px;
@@ -606,7 +612,7 @@ body {
     }
 
     .cabecalhoNavMenu li a {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .principal {
@@ -668,6 +674,10 @@ body {
         width: 50%;
     }
 
+    .timelineCard img{
+        width: 100%;
+    }
+
 }
 
 /* RESPONSIVIDADE — MOBILE PEQUENO (480px) */
@@ -717,7 +727,32 @@ body {
     .secaoSubInformacoes{
         font-size: 14px;
     }
+
+    .techStackTitulo {
+        font-size: 22px;
+    }
+
+    .techStackLabelTexto {
+        font-size: 12px;
+    }
+
+    .timeline{
+        width: 100%;
+        gap: 40px;
+    }
+
+    .timelineData{
+        font-size: 9px;
+    }
+
+    .timelineItem{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .timelineIcone, .timeline::before{
+        display: none;
+    }
+
 }
-/* 
-**************************************************** */
 
