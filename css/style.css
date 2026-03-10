@@ -411,6 +411,13 @@ body {
 
 /* ----- QUALIFICAÇÕES ----- */
 
+.sectionExperiencia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10rem auto;
+}
+
 .timeline {
     display: flex;
     flex-direction: column;
@@ -565,6 +572,98 @@ body {
     line-height: 1;
 }
 
+/*----- PROJETOS -----*/
+
+.sectionProjetos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projetosTech{
+    display: flex;
+    gap: 2rem;
+    margin-top: 4rem;
+    font-family: "Unbounded", sans-serif;
+}
+
+.projetosTech h3{
+    color: #fff;
+    font-size: 20px;
+}
+
+.projetosTech p{
+    color: #94a3b892;
+    font-size: 14px;
+}
+
+.projetoUni{
+    background: #4e51540f;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    letter-spacing: 1px;
+    border: 1px solid #94a3b829;
+    border-radius: 25px;
+    width: 100%;
+}
+
+.projetoUni:hover{
+    border-color: #743283;
+    transition: 0.3s;
+    background-color: #4e515425;
+}
+
+.projDescricao{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 10px 16px;
+}
+
+.projBadge{
+    display: flex;
+    gap: 15px;
+    padding: 10px 16px;
+    color: #94a3b892;
+    display: flex;
+}
+
+.projBadge span{
+    background-color: #4646461c;
+    border: 1px solid #4646464c;
+    border-radius: 9px;
+    color: #94a3b892;
+    padding: 8px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.btnVisit{
+    background: #4646461c;
+    border: 1px solid #4646464c;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 0 auto 16px 16px;
+}   
+
+.btnVisit:hover{
+    background: #743283;
+    transition: 0.4s;
+}
+
+.btnVisit a{
+    color: #fff;
+    font-family: "Unbounded", sans-serif;
+    font-size: 14px;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.btnVisit i{
+    padding-left: 6px;
+}
+
 /* RESPONSIVIDADE — TABLET */
 
 @media (max-width: 1024px) {
@@ -592,6 +691,15 @@ body {
 
     .code-body {
         padding: 1.5rem 2rem;
+    }
+
+    .projetosTech{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projetoUni{
+        max-width: 900px;
     }
 }
 
@@ -752,6 +860,10 @@ body {
 
     .timelineIcone, .timeline::before{
         display: none;
+    }
+
+    .projetoUni{
+        max-width: 400px;
     }
 
 }
