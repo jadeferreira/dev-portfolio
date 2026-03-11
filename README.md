@@ -4,13 +4,13 @@
 
 Visite o portfólio: https://jadeferreira.github.io/dev-portfolio/ :)
 
----
+
 
 ## ✨ Sobre o Projeto
 
 Este portfólio foi criado do zero com foco em design moderno, responsividade e experiência do usuário. Ele apresenta minhas experiências profissionais, habilidades técnicas, projetos desenvolvidos e formas de contato.
 
----
+
 
 ## 🚀 Funcionalidades
 
@@ -21,7 +21,7 @@ Este portfólio foi criado do zero com foco em design moderno, responsividade e 
 - 🔗 Linkagem direta para WhatsApp e redes sociais
 - ⚓ Navegação suave entre seções via menu
 
----
+
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -32,26 +32,7 @@ Este portfólio foi criado do zero com foco em design moderno, responsividade e 
 - **Google Fonts** — Poppins & Unbounded
 - **EmailJS** — envio de e-mails sem backend
 
----
 
-## 📁 Estrutura de Pastas
-
-portfolio/
-├── index.html
-├── css/
-│ └── style.css
-├── js/
-│ ├── script.js
-│ └── animacoes.js
-├── assets/
-│ |     ├── images
-| |          ├──
-│ └── curriculoJadeFerreira.pdf
-└── fonts/
-├── Unbounded-Bold.woff2
-└── Poppins-Regular.woff2
-
----
 
 ## 📬 Contato
 
