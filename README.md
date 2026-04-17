@@ -5,11 +5,9 @@
 Visite o portfólio: https://jadeferreira.github.io/dev-portfolio/ :)
 
 
-
 ## ✨ Sobre o Projeto
 
 Este portfólio foi criado do zero com foco em design moderno, responsividade e experiência do usuário. Ele apresenta minhas experiências profissionais, habilidades técnicas, projetos desenvolvidos e formas de contato.
-
 
 
 ## 🚀 Funcionalidades
